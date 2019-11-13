@@ -4,9 +4,10 @@ import MovieCard from './MovieCard';
 
 const Movie = (props) => {
   const [movie, setMovie] = useState();
- 
+  const id = props.match.params.id;
+
   useEffect(() => {
-    const id = props.match.params.id;
+    
     // change ^^^ that line and grab the id from the URL
     // You will NEED to add a dependency array to this effect hook
 
@@ -19,7 +20,7 @@ const Movie = (props) => {
           console.error(error);
         });
 
-  },[props.match.params.id]);
+  },[id]);
   
   // Uncomment this only when you have moved on to the stretch goals
   const saveMovie = () => {
@@ -31,7 +32,6 @@ const Movie = (props) => {
     return <div>Loading movie information...</div>;
   }
 
-  const { title, director, metascore, stars } = movie;
   return (
     <div className="save-wrapper">
       <MovieCard movie={movie}/>

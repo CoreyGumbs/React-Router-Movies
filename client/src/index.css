@@ -5,6 +5,10 @@ body {
   background-color: #f2f2f2;
 }
 
+a {
+  text-decoration: none;
+}
+
 .movie-card {
   background-color: #fff;
   border: 0;
@@ -44,9 +48,10 @@ body {
   margin: 0 10px;
 }
 .saved-active {
-  color: blue;
+  color: white;
   border: 1px solid grey;
   padding: 5px;
+  background-color: blue;
 }
 .save-wrapper {
   position: relative;
